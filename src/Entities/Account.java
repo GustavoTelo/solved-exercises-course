@@ -4,7 +4,7 @@ public class Account {
 
 	 private Integer number;
 	 private String holder;
-	 private Double balance;
+	 private double balance;
 	 
 	 public Account(Integer number, String holder) {
 			this.number = number;
@@ -36,13 +36,13 @@ public class Account {
 	 }	
 	 
 	 public void withdraw(double amount) {
-		 this.balance -= amount - 5.00;
+		 this.balance -= amount + 5.00;
 	 }
 
 	 @Override
 	 public String toString() {
-		return "Account [number=" + number + ", holder=" + holder + ", balance=" + String.format(".2f%", balance) + "]";
-	 }
+		return "Account " + number + ", Holder: " + holder + ", Balance: $ " + String.format("%.2f", balance);
+	 }	
 	 
 	 
 	 
